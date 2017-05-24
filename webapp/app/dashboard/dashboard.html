@@ -1,0 +1,18 @@
+<!-- Top Navigator -->
+<div ng-include="'app/layouts/topNav.html'"></div>
+
+<!-- Main content -->
+<div class="container">
+    <div class="row">
+        <div class="s12 m12 l12 xl12">
+            <span class="flow-text">Username: </span>
+            <label class="flow-text" ng-bind="vm.userData.data.username"></label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="s12 m12 l12 xl12">
+            <span class="flow-text">Email: </span>
+            <label class="flow-text" ng-bind="vm.userData.data.email"></label>
+        </div>
+    </div>
+</div>

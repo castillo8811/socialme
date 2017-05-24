@@ -1,0 +1,27 @@
+<div class="container center login-box">
+    <form ng-submit="vm.login()">
+        <div class="row">
+            <div class="col s12 offset-m6 m6 offset-l4 l4 card hoverable">
+                <div class="card-title login-icon">
+                    <span class="flow-text">Login</span>
+                </div>
+                <div class="card-content default-margin">
+                    <div class="input-field">
+                        <label for="username">Username</label>
+                        <input type="text" name="username" id="username" class="flow-text validate" required
+                               ng-model="vm.userData.username">
+                    </div>
+                    <div class="input-field">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" id="password" class="flow-text validate" required
+                               ng-model="vm.userData.password">
+                    </div>
+                    <button type="submit" class="btn green waves-effect waves-light login-button">Login</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <a class="link" ng-click="vm.goToForgot()">Forgot Password</a>
+        </div>
+    </form>
+</div>

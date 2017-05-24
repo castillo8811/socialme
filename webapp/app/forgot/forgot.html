@@ -1,0 +1,38 @@
+<div class="container center login-box">
+    <form ng-submit="vm.requestPasswordChange()" ng-if="!vm.emailSent">
+        <div class="row">
+            <div class="col s12 offset-m6 m6 offset-l4 l4 card hoverable">
+                <div class="card-title login-icon">
+                    <span class="flow-text">Reset password</span>
+                    <div class="center-align">
+                        <label>Please type the email linked to your account.</label>
+                    </div>
+                </div>
+                <div class="card-content default-margin">
+                    <div class="input-field">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email" class="flow-text validate" required
+                               ng-model="vm.email">
+                    </div>
+                    <button type="submit" class="btn green waves-effect waves-light login-button">Send Email</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <a class="link" ng-click="vm.goToLogin()">Go to Login</a>
+        </div>
+    </form>
+    <div class="row" ng-if="vm.emailSent">
+        <div class="col s12 offset-m6 m6 offset-l4 l4 card hoverable">
+            <div class="card-title login-icon">
+                <span class="flow-text" ng-bind="vm.message.title"></span>
+                <div class="center-align">
+                    <label ng-bind="vm.message.content"></label>
+                </div>
+            </div>
+            <div class="card-content default-margin">
+                <button class="btn green waves-effect waves-light login-button" ng-click="vm.goToLogin()">Go to Login</button>
+            </div>
+        </div>
+    </div>
+</div>
